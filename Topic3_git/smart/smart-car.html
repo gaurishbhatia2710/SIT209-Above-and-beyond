@@ -1,0 +1,228 @@
+<!-- 
+Name : Gaurish Bhatia
+Student ID : 2110994762
+Remarks: This is the code file for the smart car user interface.
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User console</title>
+  <meta name="author" content="Gaurish Bhatia" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" ></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    
+
+<!-- Adding the style for the CSS. -->
+<style>
+        
+
+
+body{
+   background-image: url(https://wallpapers.com/images/featured/6bly12umg2d4psr2.jpg);
+     background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+}
+
+.console{
+
+   position: relative;
+    position: center;
+    text-align: center;
+    border-radius: 20px ;
+    margin-top: 10px;
+    width: 100%;
+    width: 1000px;  
+    Height :auto;
+    background-color: rgba(255, 245, 245, 0.503);
+    color: darkblue;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+
+}
+
+tr{
+  border: 2px solid black;
+  border-radius: 20px;
+  
+  
+  
+  
+}
+td{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  
+  font-weight: bolder;
+ 
+  
+
+}
+.welcome{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 70px;
+  font-weight:900 ;
+  color:white;
+  background-color: black;
+  text-align: center;
+}
+</style>
+
+</head>
+<body>
+
+  <u><div class="welcome">Welcome To The Smart Car User Interface.</div></u>
+
+  <div class="console">
+
+    
+    <table class="container" style="margin-top: 3cm  ;">
+      <tr>
+      <td class="container" id ="switch" > Switch On or Off the car 
+        <button id="Button_state" class="btn btn-primary">ON/OFF</button>
+        <div id="carstate" style="color:maroon"> Car Status </div>
+      </td>
+        
+        
+
+      
+
+    </tr>
+
+    <tr>
+      <td class="container" id ="Lights" > Switch ON or Switch OFF the Lights
+        <button id="light_Button_state" class="btn btn-primary">ON/OFF</button>
+        <div id="lightstate" style="color:maroon"> Lights Status </div>
+      </td>
+        
+        
+
+      
+
+    </tr>
+
+    <tr>
+      <td class="container" id ="AC" > Turn The AC ON/OFF
+        <button id="AC_button" class="btn btn-primary">ON/OFF</button>
+        <div id="AC_state" style="color:maroon"> Air conditioning Status : </div>
+      </td> 
+
+    </tr>
+
+    <tr>
+      <td class="container" id ="AC_temp" > Set the AC temperature
+        <input type="range" class="form-range" id="AC_temperature" min="0" max="27" step="1">
+
+        <div id="AC_value" style="color:maroon"> Air conditioning Temperature : </div>
+      </td> 
+
+    </tr>
+
+    <tr>
+      <td class="container" id ="Infotainment1" > Set the Infotainment volume
+        <input type="range" class="form-range" id="Infotainment" min="0" max="30" step="1">
+
+        <div id="Infotainment_value" style="color:maroon"> Infotainment Volume : </div>
+      </td> 
+
+    </tr>
+    </table>
+  
+
+  </div>
+
+
+  
+
+<!-- Adding the script for making the webpage dynamic -->
+  <script>
+    const Button_state = $('#Button_state');
+    const car_state=$('#carstate');
+    const Air_Conditioner=$('#AC_button');
+    const Air_Conditioner_State=$('#AC_state');
+    const Infotainment = $('#Infotainment');
+    const volume= $('#Infotainment_value');
+    const Lights = $('#light_Button_state');
+    const LightState=$('#lightstate');
+    const Air_conditioner_temp=$('#AC_temperature');
+    const AC_val=$('#AC_value');
+    
+    
+    
+    Button_state.on('click', function Car_Switch() {
+      if (Button_state.text() === 'ON') { 
+        Button_state.text('OFF');
+        car_state.text('Car is On');
+        
+      } else {
+        Button_state.text('ON');
+        car_state.text('Car is OFF');
+        
+      }
+    });
+    
+    Infotainment.on('input', function set_volume() {
+      vol = Infotainment.val();
+      volume.text(`Infotainment Volume : ${vol}`);
+    
+    });
+    
+    Lights.on('click', function Light(){
+        if(Lights.text()=='Turn ON')
+        {
+            Lights.text('Turn OFF');
+            LightState.text('Lights are ON');
+            
+        }
+        else{
+            Lights.text('Turn ON');
+            LightState.text('Lights are OFF');
+        }
+    
+    });
+    
+    Air_Conditioner.on('click', function AC(){
+        if(Air_Conditioner.text()=='Turn ON AC')
+        {
+            Air_Conditioner.text('Turn OFF AC');
+            Air_Conditioner_State.text('Air Conditioning is ON.');
+            Air_conditioner_temp.val(24);
+            AC_val.text(`Air conditioning Temperature : 24 degrees`);
+            
+            
+        }
+        else{
+            Air_Conditioner.text('Turn ON AC');
+            Air_Conditioner_State.text('Air Conditioning is OFF');
+            Air_conditioner_temp.val(0);
+            AC_val.text(`Air conditioning Temperature : OFF `);
+        }
+    
+    });
+    
+    Air_conditioner_temp.on('input', function temperature_set() {
+      temper = Air_conditioner_temp.val();
+      AC_val.text(`Air conditioning Temperature :${temper} degrees`);
+      
+      
+    });</script>  
+
+  
+
+
+</body>
+
+</html>
