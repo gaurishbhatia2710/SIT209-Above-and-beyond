@@ -1,0 +1,118 @@
+<!-- 
+Name : Gaurish Bhatia
+Student ID : 2110994762.
+Above and Beyond: Topic 2
+Remarks : here is the code for the above and beyond topic 2.
+ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="A Console for changing the color of lights." />
+    <meta name="author" content="Gaurish Bhatia" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Smart Lighting System</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+
+    
+  </head>
+
+  <!-- Adding a background image -->
+  <body style=" background-image:url(sample.jpeg) ; background-repeat: no-repeat; background-attachment: fixed;background-size: cover;">
+
+    <u style="color:whitesmoke"><div id="container" style="text-align: center;background-color:black;color: white; font-family: 'Times New Roman', Times, serif;font-size: 100px;"> Light Color Changing Panel </div></u>
+    
+  <br><br><center> <div class="able">
+    
+    <table>
+
+        <tr>
+            
+            <th>
+                <!-- Adding the selector for the lights. -->
+               <u> Select The Device:</u>
+            </th>
+            <td>
+                <select name="device" id="Light_ID" style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: darkblue;">
+                    <option value="device1">Light 1</option>
+                    <option value="device2">Light 2</option>
+                    <option value="device3">Light 3</option>
+                    </select>
+            </td>
+           
+                
+
+
+                
+            
+            
+           
+        </tr>
+        <tr> 
+            <th>
+                <u> Select The Colour:</u>
+
+                <!-- Adding the colour selector for the colour selection. -->
+            </th>
+            <td>
+                <input type="color" id="change" value="#ffffff">
+                <button type="button" onclick="change()">Change Colour</button>
+
+
+            </td>
+        </tr>
+        
+        
+    
+        <tr>
+            <th>
+                Light 1 :
+                <div class="lightt" id="device1"> </div>
+                
+            </th>
+            
+        </tr>
+        <tr>
+            <th>
+                Light 2 :
+                <div class="lightt" id="device2"> </div>
+                
+            </th>
+            
+        </tr>
+        <tr>
+            <th>
+                Light 3 :
+                <div class="lightt" id="device3"> </div>
+                
+            </th>
+            
+        </tr>
+
+            
+        
+    </table>
+     
+
+
+        
+
+    
+    
+
+</div>
+</center> 
+    
+    
+<script src="function.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+  </body>
+</html>

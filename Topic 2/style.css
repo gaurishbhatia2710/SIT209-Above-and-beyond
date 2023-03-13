@@ -1,0 +1,32 @@
+.able{
+    
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    width: 500px;  
+    Height : 400px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    
+
+
+}
+th{
+    font-size: 30px;
+    font-family:monospace;
+}
+.lightt{
+    width: 70px;
+	height: 70px;
+	border-radius: 10px;
+	margin-right: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
